@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: sans-serif;
+  list-style: none;
+}
+header {
+  background-color: rgb(135, 206, 250);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  padding: 2rem;
+}
+
+main > section {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+section > h2 {
+  font-weight: bold;
+  color: rgb(135, 206, 250);
+  padding: 1rem;
+}
+
+ul {
+  padding-left: 3rem;
+}
+ul > li {
+  padding: 0.5rem;
+  font-size: large;
+  list-style: circle;
+}
+
+.importante {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+table {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 50rem;
+  height: 20rem;
+
+  /* Posiblemente hay que hacer grid, con los elementos pequeños (th y td) en lugar de con el elemento <table>, pero no encuentro la forma.
+  También quiero que caiga el <thead> en su sitio */
+
+  grid-auto-flow: row;
+  font-size: large;
+}
+
+table > thead {
+  color: white;
+  background-color: lightskyblue;
+}
+
+th,
+td {
+  padding: 1rem;
+}
+
+th:nth-child(1) {
+  font-weight: bold;
+  background-color: blue;
+}
+tr:nth-child(odd) > td {
+  background-color: aquamarine;
+}
+
+tr:nth-child(even) > td {
+  background-color: rgb(236, 255, 127);
+}
+tr:nth-child(3) > td {
+  font-weight: bold;
+  align-items: center;
+}
