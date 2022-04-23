@@ -3,85 +3,63 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-* {
+html {
+  --maincolor: rgb(123, 142, 227);
+}
+body {
   font-family: sans-serif;
-  list-style: none;
 }
-header {
-  background-color: rgb(135, 206, 250);
+body > header {
+  background-color: var(--maincolor);
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-h1 {
-  padding: 2rem;
+  text-align: center;
+  padding: 1.5rem;
 }
 
 main > section {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
-section > h2 {
-  font-weight: bold;
-  color: rgb(135, 206, 250);
-  padding: 1rem;
+h2 {
+  color: var(--maincolor);
+  margin-bottom: 1rem;
 }
-
-ul {
+main > section > ul {
   padding-left: 3rem;
 }
-ul > li {
-  padding: 0.5rem;
-  font-size: large;
+main > section > ul > li {
   list-style: circle;
+  margin-bottom: 0.5rem;
 }
 
 .importante {
-  font-weight: bold;
   text-decoration: underline;
+  font-weight: bold;
 }
 
-table {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  width: 50rem;
-  height: 20rem;
-
-  /* Posiblemente hay que hacer grid, con los elementos pequeños (th y td) en lugar de con el elemento <table>, pero no encuentro la forma.
-  También quiero que caiga el <thead> en su sitio */
-
-  grid-auto-flow: row;
-  font-size: large;
+main > section > table {
+  padding-left: 3rem;
 }
-
-table > thead {
+thead > tr {
+  background-color: var(--maincolor);
   color: white;
-  background-color: lightskyblue;
+}
+tr:nth-child(even) {
+  background-color: rgb(197, 204, 236);
+}
+tbody > tr:nth-child(odd) {
+  background-color: rgb(228, 231, 242);
+}
+tbody > tr > th {
+  background-color: rgb(123, 142, 227, 40%);
+}
+
+#descanso {
+  font-weight: bold;
+  text-align: center;
 }
 
 th,
 td {
-  padding: 1rem;
-}
-
-th:nth-child(1) {
-  font-weight: bold;
-  background-color: blue;
-}
-tr:nth-child(odd) > td {
-  background-color: aquamarine;
-}
-
-tr:nth-child(even) > td {
-  background-color: rgb(236, 255, 127);
-}
-tr:nth-child(3) > td {
-  font-weight: bold;
-  align-items: center;
+  padding: 0.75rem;
 }

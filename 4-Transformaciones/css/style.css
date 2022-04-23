@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16rem;
+  height: 16rem;
+
+  position: relative;
+}
+h2 {
+  font-family: sans-serif;
+  font-size: 3rem;
+  font-weight: 200;
+}
+p {
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  transition-duration: 1s;
+}
+
+#rojo {
+  background-color: red;
+  top: 0;
+  left: 0;
+
+  transform-origin: top left;
+}
+#amarillo {
+  background-color: yellow;
+  top: 0;
+  right: 0;
+  transform-origin: top right;
+}
+#azul {
+  background-color: blue;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom left;
+}
+#verde {
+  background-color: rgb(58, 185, 58);
+  bottom: 0;
+  right: 0;
+  transform-origin: bottom right;
+}
+main:hover #rojo,
+main:hover #verde {
+  transform: rotate(90deg);
+}
+main:hover #amarillo,
+main:hover #azul {
+  transform: rotate(-90deg);
+}
